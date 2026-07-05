@@ -45,14 +45,6 @@ python camber_study.py --n-points 300
 Runs every case in `runs/camber_M#_*/`, writes `camber_results.csv` and
 `camber_plot.png`.
 
-## Reproducing the report
-
-```bash
-quarto render main.qmd --to pdf
-```
-Requires the four figures referenced in `main.qmd` to exist under `figures/`
-(copy them from the project root / `runs/conv_N0300_2412/` after running the
-scripts above — see comments in `main.qmd` for exact filenames).
 
 ## Notes on parameters
 
