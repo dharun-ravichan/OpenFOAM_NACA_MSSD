@@ -15,16 +15,14 @@ effect of camber on Cl/Cd. Built for RWTH Aachen MSSD Project 2.
 
 | File | Purpose |
 |---|---|
-| `foam_pipeline.py` | Shared library: NACA geometry generation, the O-grid mesher, OpenFOAM dictionary writers, and `run_case()` — runs one case end-to-end (mesh → `blockMesh` → `checkMesh` → `foamRun` → parse results) via Docker. |
-| `convergence_study.py` | Entry point 1: sweeps surface point count N at fixed camber, produces `convergence_results.csv`. |
-| `camber_study.py` | Entry point 2: sweeps camber M = 0-8 at fixed N, produces `camber_results.csv`. |
+| `foam_pipeline.py` | Shared library: NACA geometry generation, the mesher, OpenFOAM dictionary writers, and `run_case()` — runs one case end-to-end (mesh → `blockMesh` → `checkMesh` → `foamRun` → parse results) via Docker. |
+| `convergence_study.py` | Sweeps surface point count N at fixed camber, produces `convergence_results.csv`. |
+| `camber_study.py` | Sweeps camber M = 0-8 at fixed N, produces `camber_results.csv`. |
 | `convergence_plot.py` | Generates the discretization convergence figures (`cl_cd_vs_N.png`, used as Figure 1 in the report) from cached `RESULT.json` files — no Docker, no re-running. |
 | `check_sim_time_convergence_v2.py` | Scans a completed case's saved time series to find the simulation-time convergence point (used to produce Figure 2 in the report). |
 
 
 ## Running it
-
-All commands run from the project root, in a terminal with Docker running.
 
 **1. Discretization convergence study** (sweeps N, fixed camber NACA 2412):
 ```bash
