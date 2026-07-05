@@ -10,8 +10,6 @@ effect of camber on Cl/Cd. Built for RWTH Aachen MSSD Project 2.
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/), running,
   with the `microfluidica/openfoam:13` image available
   (`docker pull microfluidica/openfoam:13`)
-- (Optional, for the report) [Quarto](https://quarto.org) + a LaTeX
-  distribution (`quarto install tinytex`) to render `main.qmd` to PDF
 
 ## Files
 
